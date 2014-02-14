@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+
+  <servlet>
+    <servlet-name>IndexServlet</servlet-name>
+    <servlet-class>com.groupdocs.viewer.samples.javaweb.IndexServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>IndexServlet</servlet-name>
+    <url-pattern>/viewer</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>GetDocumentPageImageHandlerServlet</servlet-name>
+    <servlet-class>com.groupdocs.viewer.samples.javaweb.GetDocumentPageImageHandlerServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>GetDocumentPageImageHandlerServlet</servlet-name>
+    <url-pattern>/GetDocumentPageImageHandler/*</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>GetFileHandlerServlet</servlet-name>
+    <servlet-class>com.groupdocs.viewer.samples.javaweb.GetFileHandlerServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>GetFileHandlerServlet</servlet-name>
+    <url-pattern>/GetFileHandler/*</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>GetImageUrlsHandlerServlet</servlet-name>
+    <servlet-class>com.groupdocs.viewer.samples.javaweb.GetImageUrlsHandlerServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>GetImageUrlsHandlerServlet</servlet-name>
+    <url-pattern>/GetImageUrlsHandler</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>GetPdf2JavaScriptHandlerServlet</servlet-name>
+    <servlet-class>com.groupdocs.viewer.samples.javaweb.GetPdf2JavaScriptHandlerServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>GetPdf2JavaScriptHandlerServlet</servlet-name>
+    <url-pattern>/GetPdf2JavaScriptHandler</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>GetPrintableHtmlHandlerServlet</servlet-name>
+    <servlet-class>com.groupdocs.viewer.samples.javaweb.GetPrintableHtmlHandlerServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>GetPrintableHtmlHandlerServlet</servlet-name>
+    <url-pattern>/GetPrintableHtmlHandler</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>LoadFileBrowserTreeDataHandlerServlet</servlet-name>
+    <servlet-class>com.groupdocs.viewer.samples.javaweb.LoadFileBrowserTreeDataHandlerServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>LoadFileBrowserTreeDataHandlerServlet</servlet-name>
+    <url-pattern>/LoadFileBrowserTreeDataHandler</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>ViewDocumentHandlerServlet</servlet-name>
+    <servlet-class>com.groupdocs.viewer.samples.javaweb.ViewDocumentHandlerServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>ViewDocumentHandlerServlet</servlet-name>
+    <url-pattern>/ViewDocumentHandler</url-pattern>
+  </servlet-mapping>
+</web-app>   
