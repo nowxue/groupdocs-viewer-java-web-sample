@@ -1,25 +1,24 @@
 package com.groupdocs.viewer.samples.javaweb;
 
-import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
 /**
- *
- * @author Alex Bobkov
+ * Author Aleksey Permyakov
  */
-public class ViewDocumentHandlerServlet extends ViewerServlet{
-
+public class GetImageHandlerServlet extends ViewerServlet {
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        //TODO
+        response.setHeader("Content-type", "image/png");
+        String contextPath = request.getPathInfo();
+        String[] path = contextPath.split("/");
+        viewerHandler.getImageHandler(path[path.length - 1], response);
     }
 
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.setHeader("Content-type", "application/json;charset=UTF-8");
-        response.getWriter().print(viewerHandler.viewDocumentHandler(request));
+        //TODO
     }
-    
 }
