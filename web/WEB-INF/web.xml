@@ -121,4 +121,14 @@
     <servlet-name>ViewDocumentHandlerServlet</servlet-name>
     <url-pattern>/ViewDocumentHandler</url-pattern>
   </servlet-mapping>
-</web-app>   
+  
+  <servlet-mapping>   
+    <servlet-name>default</servlet-name>
+    <url-pattern>/document-viewer/assets/*</url-pattern>
+    <url-pattern>*.js</url-pattern>
+    <url-pattern>*.css</url-pattern>
+    <url-pattern>*.png</url-pattern>
+    <url-pattern>*.gif</url-pattern>
+  </servlet-mapping>
+  
+</web-app>  

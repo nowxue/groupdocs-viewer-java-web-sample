@@ -25,8 +25,8 @@ public abstract class ViewerServlet extends HttpServlet {
             final String appPath = "http://localhost:8080/";
             final String basePath = "D:\\Projects\\GroupDocs\\app\\xFiles";
             final String licensePath = null;
-            final String absolutePath = "D:\\Projects\\GroupDocs\\app\\xFiles\\temp";
-            final Assets assets = new Assets(absolutePath, "/document-viewer");
+            final String realPath = getServletContext().getRealPath("/");
+            final Assets assets = new Assets(realPath, "/document-viewer");
             final ServiceConfiguration config = new ServiceConfiguration(appPath, basePath, licensePath, assets, Boolean.FALSE);
             viewerHandler = new ViewerHandler(config);
         } catch (Exception ex) {

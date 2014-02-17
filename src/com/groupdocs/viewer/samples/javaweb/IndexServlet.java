@@ -14,6 +14,7 @@ public class IndexServlet extends ViewerServlet{
     
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.setHeader("Access-Control-Allow-Origin", "*");
         request.setAttribute("viewer_head", viewerHandler.getHeader());
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("viewer/index.jsp");
         requestDispatcher.forward(request, response);
