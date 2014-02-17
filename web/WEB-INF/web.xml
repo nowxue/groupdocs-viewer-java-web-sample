@@ -17,36 +17,6 @@
   </servlet-mapping>
 
     <servlet>
-        <servlet-name>GetJsServlet</servlet-name>
-        <servlet-class>com.groupdocs.viewer.samples.javaweb.GetJsHandlerServlet</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>GetJsServlet</servlet-name>
-        <url-pattern>/GetJsHandler</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>GetCssServlet</servlet-name>
-        <servlet-class>com.groupdocs.viewer.samples.javaweb.GetCssHandlerServlet</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>GetCssServlet</servlet-name>
-        <url-pattern>/GetCssHandler</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>GetImageServlet</servlet-name>
-        <servlet-class>com.groupdocs.viewer.samples.javaweb.GetImageHandlerServlet</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>GetImageServlet</servlet-name>
-        <url-pattern>/images/*</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
     <servlet-name>GetDocumentPageImageHandlerServlet</servlet-name>
     <servlet-class>com.groupdocs.viewer.samples.javaweb.GetDocumentPageImageHandlerServlet</servlet-class>
   </servlet>
