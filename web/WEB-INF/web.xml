@@ -13,47 +13,18 @@
 
   <servlet-mapping>
     <servlet-name>IndexServlet</servlet-name>
-    <url-pattern>/</url-pattern>
+    <url-pattern>/viewer</url-pattern>
   </servlet-mapping>
-
-    <servlet>
-        <servlet-name>GetJsServlet</servlet-name>
-        <servlet-class>com.groupdocs.viewer.samples.javaweb.GetJsHandlerServlet</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>GetJsServlet</servlet-name>
-        <url-pattern>/GetJsHandler</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>GetCssServlet</servlet-name>
-        <servlet-class>com.groupdocs.viewer.samples.javaweb.GetCssHandlerServlet</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>GetCssServlet</servlet-name>
-        <url-pattern>/GetCssHandler</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>GetImageServlet</servlet-name>
-        <servlet-class>com.groupdocs.viewer.samples.javaweb.GetImageHandlerServlet</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>GetImageServlet</servlet-name>
-        <url-pattern>/images/*</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
+  
+  
+  <servlet>
     <servlet-name>GetDocumentPageImageHandlerServlet</servlet-name>
     <servlet-class>com.groupdocs.viewer.samples.javaweb.GetDocumentPageImageHandlerServlet</servlet-class>
   </servlet>
 
   <servlet-mapping>
     <servlet-name>GetDocumentPageImageHandlerServlet</servlet-name>
-    <url-pattern>/document-viewer/GetDocumentPageImageHandler/*</url-pattern>
+    <url-pattern>/GetDocumentPageImageHandler/*</url-pattern>
   </servlet-mapping>
   
   
@@ -64,7 +35,7 @@
 
   <servlet-mapping>
     <servlet-name>GetFileHandlerServlet</servlet-name>
-    <url-pattern>/document-viewer/GetFileHandler/*</url-pattern>
+    <url-pattern>/GetFileHandler/*</url-pattern>
   </servlet-mapping>
   
   
