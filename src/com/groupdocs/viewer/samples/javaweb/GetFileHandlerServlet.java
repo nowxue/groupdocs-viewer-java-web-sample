@@ -1,11 +1,11 @@
 package com.groupdocs.viewer.samples.javaweb;
 
-import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import org.apache.log4j.Logger;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
 /**
  *
@@ -19,7 +19,7 @@ public class GetFileHandlerServlet extends ViewerServlet{
             String path = request.getQueryString().split("=")[1];
             viewerHandler.getFileHandler(path, response);
         } catch (Exception ex) {
-            Logger.getLogger(GetFileHandlerServlet.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(this.getClass()).error(ex);
         }
     }
 
