@@ -1,6 +1,6 @@
+/build
 /build_temp
 /dist
 /*.iml
-/build
 /nbproject
 /nbbuild.xml

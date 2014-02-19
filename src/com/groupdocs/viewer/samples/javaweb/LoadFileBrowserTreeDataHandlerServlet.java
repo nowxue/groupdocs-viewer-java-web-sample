@@ -18,7 +18,6 @@ public class LoadFileBrowserTreeDataHandlerServlet extends ViewerServlet{
 
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.setHeader("Access-Control-Allow-Origin", "*");
         response.setHeader("Content-type", "application/json;charset=UTF-8");
         response.getWriter().print(viewerHandler.loadFileBrowserTreeDataHandler(request));
     }

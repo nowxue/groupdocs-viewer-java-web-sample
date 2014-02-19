@@ -17,13 +17,43 @@
     </servlet-mapping>
 
     <servlet>
+        <servlet-name>GetJsServlet</servlet-name>
+        <servlet-class>com.groupdocs.viewer.samples.javaweb.GetJsHandlerServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>GetJsServlet</servlet-name>
+        <url-pattern>/GetJsHandler</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GetCssServlet</servlet-name>
+        <servlet-class>com.groupdocs.viewer.samples.javaweb.GetCssHandlerServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>GetCssServlet</servlet-name>
+        <url-pattern>/GetCssHandler</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GetImageServlet</servlet-name>
+        <servlet-class>com.groupdocs.viewer.samples.javaweb.GetImageHandlerServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>GetImageServlet</servlet-name>
+        <url-pattern>/images/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <servlet-name>GetDocumentPageImageHandlerServlet</servlet-name>
         <servlet-class>com.groupdocs.viewer.samples.javaweb.GetDocumentPageImageHandlerServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
         <servlet-name>GetDocumentPageImageHandlerServlet</servlet-name>
-        <url-pattern>/GetDocumentPageImageHandler/*</url-pattern>
+        <url-pattern>/document-viewer/GetDocumentPageImageHandler/*</url-pattern>
     </servlet-mapping>
 
 
@@ -34,7 +64,7 @@
 
     <servlet-mapping>
         <servlet-name>GetFileHandlerServlet</servlet-name>
-        <url-pattern>/GetFileHandler/*</url-pattern>
+        <url-pattern>/document-viewer/GetFileHandler/*</url-pattern>
     </servlet-mapping>
 
 
@@ -92,15 +122,6 @@
         <url-pattern>/ViewDocumentHandler</url-pattern>
     </servlet-mapping>
 
-    <servlet-mapping>
-        <servlet-name>default</servlet-name>
-        <url-pattern>/document-viewer/assets/*</url-pattern>
-        <url-pattern>*.js</url-pattern>
-        <url-pattern>*.css</url-pattern>
-        <url-pattern>*.png</url-pattern>
-        <url-pattern>*.gif</url-pattern>
-    </servlet-mapping>
-
     <filter>
         <filter-name>CORS</filter-name>
         <filter-class>com.thetransactioncompany.cors.CORSFilter</filter-class>
@@ -114,5 +135,4 @@
         <filter-name>CORS</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
-
-</web-app>  
+</web-app>   

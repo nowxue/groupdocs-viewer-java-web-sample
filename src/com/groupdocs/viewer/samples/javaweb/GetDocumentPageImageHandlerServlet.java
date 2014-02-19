@@ -17,7 +17,6 @@ public class GetDocumentPageImageHandlerServlet extends ViewerServlet{
     
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.setHeader("Content-Type", "image/png");
         try {
             String width = request.getParameter("width");
             int quality = Integer.valueOf(request.getParameter("quality"));

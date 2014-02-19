@@ -45,7 +45,7 @@
 
     <target name="war" depends="copy" description="Create war file">
         <echo>Building the war file</echo>
-        <war destfile="${project.dist.dir}/${project.name}.war" webxml="${project.build.dir}/WEB-INF/web.xml">
+        <war destfile="${project.dist.dir}/document-viewer.war" webxml="${project.build.dir}/WEB-INF/web.xml">
             <fileset dir="${project.build.dir}"/>
         </war>
 	</target>
