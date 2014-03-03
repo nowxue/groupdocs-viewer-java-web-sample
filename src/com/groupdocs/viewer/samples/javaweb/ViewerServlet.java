@@ -22,7 +22,7 @@ public abstract class ViewerServlet extends HttpServlet {
     public void init() throws ServletException {
         try {
             final String appPath = "http://127.0.0.1:8080/";
-            final String basePath = "D:\\Projects\\GroupDocs\\app\\xFiles";
+            final String basePath = "E:\\Projects\\GroupDocs\\app\\xFiles";
             final String licensePath = null;
             final ServiceConfiguration config = new ServiceConfiguration(appPath, basePath, licensePath, Boolean.FALSE, Boolean.FALSE);
             viewerHandler = new ViewerHandler(config);

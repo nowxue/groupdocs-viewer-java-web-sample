@@ -121,6 +121,16 @@
         <servlet-name>ViewDocumentHandlerServlet</servlet-name>
         <url-pattern>/ViewDocumentHandler</url-pattern>
     </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>UploadFileHandlerServlet</servlet-name>
+        <servlet-class>com.groupdocs.viewer.samples.javaweb.UploadFileHandlerServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UploadFileHandlerServlet</servlet-name>
+        <url-pattern>/UploadFile</url-pattern>
+    </servlet-mapping>
 
     <filter>
         <filter-name>CORS</filter-name>
