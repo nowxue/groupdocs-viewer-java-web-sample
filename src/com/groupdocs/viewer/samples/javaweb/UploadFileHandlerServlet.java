@@ -13,12 +13,12 @@ public class UploadFileHandlerServlet extends ViewerServlet{
 
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.getWriter().print(viewerHandler.uploadFile(request.getParameter("filePath")));
+        writeOutput(null, response, viewerHandler.uploadFile(request.getParameter("filePath"), 0));
     }
 
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        
+        doGet(request, response);
     }
     
 }

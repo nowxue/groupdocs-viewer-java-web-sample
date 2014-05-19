@@ -25,7 +25,7 @@ public class GetFileHandlerServlet extends ViewerServlet{
 
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // Not needed
+        doGet(request, response);
     }
    
 }

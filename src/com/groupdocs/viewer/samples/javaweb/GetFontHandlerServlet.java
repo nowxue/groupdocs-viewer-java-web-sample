@@ -9,16 +9,18 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Alex Bobkov
  */
-public class GetPrintableHtmlHandlerServlet extends ViewerServlet{
+public class GetFontHandlerServlet extends ViewerServlet{
 
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // Implement this method to support IE
+        String pathInfo = request.getPathInfo();
+        String[] path = pathInfo.split("/");
+        viewerHandler.getFontHandler(path[path.length - 1], response);
     }
 
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        writeOutput("text/html", response, viewerHandler.getPrintableHtmlHandler(request, response));
+        doGet(request, response);
     }
     
 }

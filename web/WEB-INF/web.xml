@@ -6,6 +6,7 @@
 
 <web-app>
 
+    <!-- INDEX -->
     <servlet>
         <servlet-name>IndexServlet</servlet-name>
         <servlet-class>com.groupdocs.viewer.samples.javaweb.IndexServlet</servlet-class>
@@ -16,6 +17,7 @@
         <url-pattern>/</url-pattern>
     </servlet-mapping>
 
+    <!-- LOAD RESOURCES -->
     <servlet>
         <servlet-name>GetJsServlet</servlet-name>
         <servlet-class>com.groupdocs.viewer.samples.javaweb.GetJsHandlerServlet</servlet-class>
@@ -25,6 +27,7 @@
         <servlet-name>GetJsServlet</servlet-name>
         <url-pattern>/GetJsHandler</url-pattern>
     </servlet-mapping>
+    
 
     <servlet>
         <servlet-name>GetCssServlet</servlet-name>
@@ -35,6 +38,7 @@
         <servlet-name>GetCssServlet</servlet-name>
         <url-pattern>/GetCssHandler</url-pattern>
     </servlet-mapping>
+    
 
     <servlet>
         <servlet-name>GetImageServlet</servlet-name>
@@ -45,7 +49,19 @@
         <servlet-name>GetImageServlet</servlet-name>
         <url-pattern>/images/*</url-pattern>
     </servlet-mapping>
+    
+    
+    <servlet>
+        <servlet-name>GetFontHandlerServlet</servlet-name>
+        <servlet-class>com.groupdocs.viewer.samples.javaweb.GetFontHandlerServlet</servlet-class>
+    </servlet>
 
+    <servlet-mapping>
+        <servlet-name>GetFontHandlerServlet</servlet-name>
+        <url-pattern>/fonts/*</url-pattern>
+    </servlet-mapping>
+
+    <!-- MAIN HANDLERS -->
     <servlet>
         <servlet-name>GetDocumentPageImageHandlerServlet</servlet-name>
         <servlet-class>com.groupdocs.viewer.samples.javaweb.GetDocumentPageImageHandlerServlet</servlet-class>
@@ -55,7 +71,7 @@
         <servlet-name>GetDocumentPageImageHandlerServlet</servlet-name>
         <url-pattern>/document-viewer/GetDocumentPageImageHandler/*</url-pattern>
     </servlet-mapping>
-
+    
 
     <servlet>
         <servlet-name>GetFileHandlerServlet</servlet-name>
@@ -75,7 +91,7 @@
 
     <servlet-mapping>
         <servlet-name>GetImageUrlsHandlerServlet</servlet-name>
-        <url-pattern>/GetImageUrlsHandler</url-pattern>
+        <url-pattern>/document-viewer/GetImageUrlsHandler</url-pattern>
     </servlet-mapping>
 
 
@@ -86,7 +102,7 @@
 
     <servlet-mapping>
         <servlet-name>GetPdf2JavaScriptHandlerServlet</servlet-name>
-        <url-pattern>/GetPdf2JavaScriptHandler</url-pattern>
+        <url-pattern>/document-viewer/GetPdf2JavaScriptHandler</url-pattern>
     </servlet-mapping>
 
 
@@ -97,7 +113,7 @@
 
     <servlet-mapping>
         <servlet-name>GetPrintableHtmlHandlerServlet</servlet-name>
-        <url-pattern>/GetPrintableHtmlHandler</url-pattern>
+        <url-pattern>/document-viewer/GetPrintableHtmlHandler</url-pattern>
     </servlet-mapping>
 
 
@@ -108,7 +124,7 @@
 
     <servlet-mapping>
         <servlet-name>LoadFileBrowserTreeDataHandlerServlet</servlet-name>
-        <url-pattern>/LoadFileBrowserTreeDataHandler</url-pattern>
+        <url-pattern>/document-viewer/LoadFileBrowserTreeDataHandler</url-pattern>
     </servlet-mapping>
 
 
@@ -119,7 +135,7 @@
 
     <servlet-mapping>
         <servlet-name>ViewDocumentHandlerServlet</servlet-name>
-        <url-pattern>/ViewDocumentHandler</url-pattern>
+        <url-pattern>/document-viewer/ViewDocumentHandler</url-pattern>
     </servlet-mapping>
     
     <servlet>
@@ -131,7 +147,9 @@
         <servlet-name>UploadFileHandlerServlet</servlet-name>
         <url-pattern>/UploadFile</url-pattern>
     </servlet-mapping>
+    
 
+    <!-- CORS -->
     <filter>
         <filter-name>CORS</filter-name>
         <filter-class>com.thetransactioncompany.cors.CORSFilter</filter-class>

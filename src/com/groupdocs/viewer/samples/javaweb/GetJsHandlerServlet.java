@@ -11,12 +11,11 @@ import java.io.IOException;
 public class GetJsHandlerServlet extends ViewerServlet {
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.setHeader("Content-type", "text/javascript");
         viewerHandler.getJsHandler(request.getParameter("script"), response);
     }
 
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        //TODO
+        doGet(request, response);
     }
 }

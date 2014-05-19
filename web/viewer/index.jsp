@@ -12,53 +12,65 @@
         <%=(String)request.getAttribute("viewer_head")%>
     </head>
     <body>
-        <div id="test" style="width:1000px;height:500px;overflow:hidden;position:relative;margin-bottom:20px;background-color:gray;border:1px solid #ccc;"></div>
-        <script type="text/javascript">
-            $(function() {
-                var localizedStrings = null;
+        <div id="test"></div>
+        <script>
+             $(function () { 
+                var localizedStrings = 'null';
                 var thumbsImageBase64Encoded = null;
-                $('#test').groupdocsViewer({
+                $('#test').groupdocsViewer({ 
                     filePath: '',
-                    docViewerId: 'doc_viewer1',
-                    quality: 100,
-                    showThumbnails: false,
-                    openThumbnails: false,
-                    initialZoom: 100,
-                    zoomToFitWidth: true,
-                    zoomToFitHeight: false,
-                    width: 1000,
-                    height: 500,
-                    backgroundColor: '',
-                    showFolderBrowser: true,
-                    showPrint: true,
-                    showDownload: true,
-                    showZoom: true,
-                    showPaging: true,
-                    showViewerStyleControl: true,
-                    showSearch: true,
-                    preloadPagesCount: 0,
-                    viewerStyle: 1,
-                    supportTextSelection: true,
-                    usePdfPrinting: false,
-                    localizedStrings: localizedStrings,
-                    thumbsImageBase64Encoded: thumbsImageBase64Encoded,
-                    toolbarButtonsBoxShadowStyle: '',
+                    quality: 100, 
+                    showThumbnails: true, 
+                    openThumbnails: true, 
+                    initialZoom: 100, 
+                    zoomToFitWidth: true, 
+                    zoomToFitHeight: false, 
+                    width: 1000, 
+                    height: 500, 
+                    backgroundColor: '', 
+                    showFolderBrowser: true, 
+                    showPrint: true, 
+                    showDownload: true, 
+                    showZoom: true, 
+                    showPaging: true, 
+                    showViewerStyleControl: true, 
+                    showSearch: true, 
+                    preloadPagesCount: 2, 
+                    viewerStyle: 1, 
+                    supportTextSelection: true, 
+                    usePdfPrinting: false, 
+                    localizedStrings: localizedStrings, 
+                    thumbsImageBase64Encoded: thumbsImageBase64Encoded, 
+                    toolbarButtonsBoxShadowStyle: '', 
                     toolbarButtonsBoxShadowHoverStyle: '',
-                    thumbnailsContainerBackgroundColor: '',
+                    thumbnailsContainerBackgroundColor: '', 
                     thumbnailsContainerBorderRightColor: '',
-                    toolbarBorderBottomColor: '',
+                    toolbarBorderBottomColor: '', 
                     toolbarInputFieldBorderColor: '',
-                    toolbarButtonBorderColor: '',
+                    toolbarButtonBorderColor: '', 
                     toolbarButtonBorderHoverColor: '',
                     thumbnailsContainerWidth: 0,
-                    jqueryFileDownloadCookieName: 'jqueryFileDownloadJSForGD',
-                    showDownloadErrorsInPopup: true,
-                    showImageWidth: false,
+                    jqueryFileDownloadCookieName: 'jqueryFileDownloadJSForGD', 
+                    showDownloadErrorsInPopup: false,
+                    showImageWidth: false, 
                     showHeader: true,
-                    minimumImageWidth: 0,
-                    enableStandardErrorHandling: true
-                });
-            });
+                    minimumImageWidth: 0, 
+                    enableStandardErrorHandling: true,
+                    useHtmlBasedEngine: false, 
+                    useImageBasedPrinting: true, 
+                    fileDisplayName: '', 
+                    downloadPdfFile: false,
+                    searchForSeparateWords: false,
+                    preventTouchEventsBubbling: false, 
+                    useInnerThumbnails: true,
+                    watermarkText: '', 
+                    supportPageReordering: false,
+                    watermarkFontSize: null,
+                    watermarkColor: null,
+                    watermarkLeft: null,
+                    watermarkTop: null
+                }); 
+            }); 
         </script>
     </body>
 </html>

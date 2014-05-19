@@ -13,14 +13,12 @@ public class ViewDocumentHandlerServlet extends ViewerServlet{
 
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        //TODO
+        // Implement this method to support IE
     }
 
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.setHeader("Content-type", "application/json;charset=UTF-8");
-        response.getWriter().print(viewerHandler.viewDocumentHandler(request));
-        //response.getWriter().print(request.getServerName() + request.getServerPort() + request.getContextPath());
+        writeOutput("application/json", response, viewerHandler.viewDocumentHandler(request, response));
     }
     
 }

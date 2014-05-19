@@ -17,6 +17,6 @@ public class GetCssHandlerServlet extends ViewerServlet {
 
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        //TODO
+        doGet(request, response);
     }
 }
