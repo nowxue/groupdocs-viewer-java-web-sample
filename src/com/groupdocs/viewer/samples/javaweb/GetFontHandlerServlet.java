@@ -17,10 +17,5 @@ public class GetFontHandlerServlet extends ViewerServlet{
         String[] path = pathInfo.split("/");
         viewerHandler.getFontHandler(path[path.length - 1], response);
     }
-
-    @Override
-    public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doGet(request, response);
-    }
     
 }

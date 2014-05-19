@@ -56,7 +56,7 @@
                     showHeader: true,
                     minimumImageWidth: 0, 
                     enableStandardErrorHandling: true,
-                    useHtmlBasedEngine: false, 
+                    useHtmlBasedEngine: true, 
                     useImageBasedPrinting: true, 
                     fileDisplayName: '', 
                     downloadPdfFile: false,

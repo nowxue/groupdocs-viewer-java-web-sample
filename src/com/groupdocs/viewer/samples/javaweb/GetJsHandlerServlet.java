@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * Author Aleksey Permyakov
+ * Author Alex Bobkov, Aleksey Permyakov
  */
 public class GetJsHandlerServlet extends ViewerServlet {
     @Override
@@ -14,8 +14,4 @@ public class GetJsHandlerServlet extends ViewerServlet {
         viewerHandler.getJsHandler(request.getParameter("script"), response);
     }
 
-    @Override
-    public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doGet(request, response);
-    }
 }

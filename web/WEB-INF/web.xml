@@ -148,6 +148,28 @@
         <url-pattern>/UploadFile</url-pattern>
     </servlet-mapping>
     
+    
+    <servlet>
+        <servlet-name>GetHtmlRecoucesHandlerServlet</servlet-name>
+        <servlet-class>com.groupdocs.viewer.samples.javaweb.GetHtmlRecoucesHandlerServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>GetHtmlRecoucesHandlerServlet</servlet-name>
+        <url-pattern>/GetHtmlResources/*</url-pattern>
+    </servlet-mapping>
+    
+    
+     <servlet>
+        <servlet-name>GetDocumentPageHtmlHandlerServlet</servlet-name>
+        <servlet-class>com.groupdocs.viewer.samples.javaweb.GetDocumentPageHtmlHandlerServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>GetDocumentPageHtmlHandlerServlet</servlet-name>
+        <url-pattern>/document-viewer/GetDocumentPageHtmlHandler</url-pattern>
+    </servlet-mapping>
+    
 
     <!-- CORS -->
     <filter>

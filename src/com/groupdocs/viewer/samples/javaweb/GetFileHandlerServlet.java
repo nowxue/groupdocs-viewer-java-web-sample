@@ -1,7 +1,6 @@
 package com.groupdocs.viewer.samples.javaweb;
 
 import org.apache.log4j.Logger;
-
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -21,11 +20,6 @@ public class GetFileHandlerServlet extends ViewerServlet{
         } catch (Exception ex) {
             Logger.getLogger(this.getClass()).error(ex);
         }
-    }
-
-    @Override
-    public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doGet(request, response);
     }
    
 }

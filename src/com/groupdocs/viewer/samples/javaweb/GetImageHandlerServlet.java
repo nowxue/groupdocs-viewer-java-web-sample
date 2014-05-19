@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * Author Aleksey Permyakov
+ * Author Alex Bobkov, Aleksey Permyakov
  */
 public class GetImageHandlerServlet extends ViewerServlet {
     @Override
@@ -16,8 +16,4 @@ public class GetImageHandlerServlet extends ViewerServlet {
         viewerHandler.getImageHandler(path[path.length - 1], response);
     }
 
-    @Override
-    public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doGet(request, response);
-    }
 }

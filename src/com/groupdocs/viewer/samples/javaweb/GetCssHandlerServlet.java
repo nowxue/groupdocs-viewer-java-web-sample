@@ -6,17 +6,14 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * Author Aleksey Permyakov
+ * Author Alex Bobkov, Aleksey Permyakov
  */
 public class GetCssHandlerServlet extends ViewerServlet {
+    
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setHeader("Content-type", "text/css");
         viewerHandler.getCssHandler(request.getParameter("script"), response);
     }
 
-    @Override
-    public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doGet(request, response);
-    }
 }
