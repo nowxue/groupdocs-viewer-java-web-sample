@@ -1,5 +1,5 @@
-Groupdocs Viewer for Java (Java WEB Sample)
-===========================================
+Groupdocs Viewer for Java (Java WEB Sample) 2.0.0
+=================================================
 
 1. Download and extract GroupDocs Viewer for Java into desired directory. http://groupdocs.com/java/document-viewer-library
 2. Download sample source code to any directory.
