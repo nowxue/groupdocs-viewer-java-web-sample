@@ -12,6 +12,13 @@
         <%=(String)request.getAttribute("viewer_head")%>
     </head>
     <body>
+        <div>
+            <form enctype="multipart/form-data" method="POST" action="UploadFile">
+                <input type="file" id="fileUpload" name="file"/>
+                <input type="hidden" id="fileName" name="fileName"/>
+                <input type="submit" value="Upload"/>
+            </form>
+        </div>
         <div id="test"></div>
         <script>
              $(function () { 
