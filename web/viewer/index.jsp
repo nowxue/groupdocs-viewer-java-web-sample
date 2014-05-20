@@ -15,7 +15,6 @@
         <div>
             <form enctype="multipart/form-data" method="POST" action="UploadFile">
                 <input type="file" id="fileUpload" name="file"/>
-                <input type="hidden" id="fileName" name="fileName"/>
                 <input type="submit" value="Upload"/>
             </form>
         </div>
@@ -25,7 +24,7 @@
                 var localizedStrings = 'null';
                 var thumbsImageBase64Encoded = null;
                 $('#test').groupdocsViewer({ 
-                    filePath: '',
+                    filePath: '<%=(String)request.getAttribute("filePath")%>',
                     quality: 100, 
                     showThumbnails: true, 
                     openThumbnails: true, 
