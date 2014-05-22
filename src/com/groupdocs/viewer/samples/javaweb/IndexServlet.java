@@ -31,7 +31,7 @@ public class IndexServlet extends ViewerServlet{
         }else if(filePath != null && !filePath.isEmpty()){
             groupdocsFilePath = new FilePath(filePath, viewerHandler.getConfiguration());
         }else if(tokenId != null && !tokenId.isEmpty()){
-            groupdocsFilePath = new TokenId(tokenId);
+            groupdocsFilePath = new TokenId(tokenId, null);
         }else if(fileUrl != null && !fileUrl.isEmpty()){
             groupdocsFilePath = new FileUrl(fileUrl);
         }
