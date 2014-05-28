@@ -1,4 +1,4 @@
-package com.groupdocs.viewer.samples.javaweb;
+package com.groupdocs.viewer.samples.javaweb.servlet;
 
 import org.apache.log4j.Logger;
 import javax.servlet.ServletException;

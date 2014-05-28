@@ -1,15 +1,15 @@
-package com.groupdocs.viewer.samples.javaweb;
+package com.groupdocs.viewer.samples.javaweb.servlet;
 
+import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
 
 /**
  *
  * @author Alex Bobkov
  */
-public class ViewDocumentHandlerServlet extends ViewerServlet{
+public class GetPrintableHtmlHandlerServlet extends ViewerServlet{
 
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -18,7 +18,7 @@ public class ViewDocumentHandlerServlet extends ViewerServlet{
 
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        writeOutput("application/json", response, viewerHandler.viewDocumentHandler(request, response));
+        writeOutput("text/html", response, viewerHandler.getPrintableHtmlHandler(request, response));
     }
     
 }

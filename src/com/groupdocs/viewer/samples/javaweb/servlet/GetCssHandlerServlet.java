@@ -1,4 +1,4 @@
-package com.groupdocs.viewer.samples.javaweb;
+package com.groupdocs.viewer.samples.javaweb.servlet;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -8,10 +8,12 @@ import java.io.IOException;
 /**
  * Author Alex Bobkov, Aleksey Permyakov
  */
-public class GetJsHandlerServlet extends ViewerServlet {
+public class GetCssHandlerServlet extends ViewerServlet {
+    
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        viewerHandler.getJsHandler(request.getParameter("script"), response);
+        response.setHeader("Content-type", "text/css");
+        viewerHandler.getCssHandler(request.getParameter("script"), response);
     }
 
 }

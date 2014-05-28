@@ -1,4 +1,4 @@
-package com.groupdocs.viewer.samples.javaweb;
+package com.groupdocs.viewer.samples.javaweb.servlet;
 
 import org.apache.log4j.Logger;
 import javax.servlet.ServletException;
@@ -15,8 +15,9 @@ public class GetFileHandlerServlet extends ViewerServlet{
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
-            String path = request.getQueryString().split("=")[1];
-            viewerHandler.getFileHandler(path, response);
+            String path = request.getParameter("path");
+            boolean getPdf = Boolean.valueOf(request.getParameter("getPdf"));
+            viewerHandler.getFileHandler(path, getPdf, response);
         } catch (Exception ex) {
             Logger.getLogger(this.getClass()).error(ex);
         }

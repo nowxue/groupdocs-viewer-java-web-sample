@@ -9,7 +9,7 @@
     <!-- INDEX -->
     <servlet>
         <servlet-name>IndexServlet</servlet-name>
-        <servlet-class>com.groupdocs.viewer.samples.javaweb.IndexServlet</servlet-class>
+        <servlet-class>com.groupdocs.viewer.samples.javaweb.servlet.IndexServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -20,7 +20,7 @@
     <!-- LOAD RESOURCES -->
     <servlet>
         <servlet-name>GetJsServlet</servlet-name>
-        <servlet-class>com.groupdocs.viewer.samples.javaweb.GetJsHandlerServlet</servlet-class>
+        <servlet-class>com.groupdocs.viewer.samples.javaweb.servlet.GetJsHandlerServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -31,7 +31,7 @@
 
     <servlet>
         <servlet-name>GetCssServlet</servlet-name>
-        <servlet-class>com.groupdocs.viewer.samples.javaweb.GetCssHandlerServlet</servlet-class>
+        <servlet-class>com.groupdocs.viewer.samples.javaweb.servlet.GetCssHandlerServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -42,7 +42,7 @@
 
     <servlet>
         <servlet-name>GetImageServlet</servlet-name>
-        <servlet-class>com.groupdocs.viewer.samples.javaweb.GetImageHandlerServlet</servlet-class>
+        <servlet-class>com.groupdocs.viewer.samples.javaweb.servlet.GetImageHandlerServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -53,7 +53,7 @@
     
     <servlet>
         <servlet-name>GetFontHandlerServlet</servlet-name>
-        <servlet-class>com.groupdocs.viewer.samples.javaweb.GetFontHandlerServlet</servlet-class>
+        <servlet-class>com.groupdocs.viewer.samples.javaweb.servlet.GetFontHandlerServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -64,7 +64,7 @@
     <!-- MAIN HANDLERS -->
     <servlet>
         <servlet-name>GetDocumentPageImageHandlerServlet</servlet-name>
-        <servlet-class>com.groupdocs.viewer.samples.javaweb.GetDocumentPageImageHandlerServlet</servlet-class>
+        <servlet-class>com.groupdocs.viewer.samples.javaweb.servlet.GetDocumentPageImageHandlerServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -75,7 +75,7 @@
 
     <servlet>
         <servlet-name>GetFileHandlerServlet</servlet-name>
-        <servlet-class>com.groupdocs.viewer.samples.javaweb.GetFileHandlerServlet</servlet-class>
+        <servlet-class>com.groupdocs.viewer.samples.javaweb.servlet.GetFileHandlerServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -86,7 +86,7 @@
 
     <servlet>
         <servlet-name>GetImageUrlsHandlerServlet</servlet-name>
-        <servlet-class>com.groupdocs.viewer.samples.javaweb.GetImageUrlsHandlerServlet</servlet-class>
+        <servlet-class>com.groupdocs.viewer.samples.javaweb.servlet.GetImageUrlsHandlerServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -97,7 +97,7 @@
 
     <servlet>
         <servlet-name>GetPdf2JavaScriptHandlerServlet</servlet-name>
-        <servlet-class>com.groupdocs.viewer.samples.javaweb.GetPdf2JavaScriptHandlerServlet</servlet-class>
+        <servlet-class>com.groupdocs.viewer.samples.javaweb.servlet.GetPdf2JavaScriptHandlerServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -108,7 +108,7 @@
 
     <servlet>
         <servlet-name>GetPrintableHtmlHandlerServlet</servlet-name>
-        <servlet-class>com.groupdocs.viewer.samples.javaweb.GetPrintableHtmlHandlerServlet</servlet-class>
+        <servlet-class>com.groupdocs.viewer.samples.javaweb.servlet.GetPrintableHtmlHandlerServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -119,7 +119,7 @@
 
     <servlet>
         <servlet-name>LoadFileBrowserTreeDataHandlerServlet</servlet-name>
-        <servlet-class>com.groupdocs.viewer.samples.javaweb.LoadFileBrowserTreeDataHandlerServlet</servlet-class>
+        <servlet-class>com.groupdocs.viewer.samples.javaweb.servlet.LoadFileBrowserTreeDataHandlerServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -130,7 +130,7 @@
 
     <servlet>
         <servlet-name>ViewDocumentHandlerServlet</servlet-name>
-        <servlet-class>com.groupdocs.viewer.samples.javaweb.ViewDocumentHandlerServlet</servlet-class>
+        <servlet-class>com.groupdocs.viewer.samples.javaweb.servlet.ViewDocumentHandlerServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -140,7 +140,7 @@
     
     <servlet>
         <servlet-name>UploadFileHandlerServlet</servlet-name>
-        <servlet-class>com.groupdocs.viewer.samples.javaweb.UploadFileHandlerServlet</servlet-class>
+        <servlet-class>com.groupdocs.viewer.samples.javaweb.servlet.UploadFileHandlerServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -151,7 +151,7 @@
     
     <servlet>
         <servlet-name>GetHtmlRecoucesHandlerServlet</servlet-name>
-        <servlet-class>com.groupdocs.viewer.samples.javaweb.GetHtmlRecoucesHandlerServlet</servlet-class>
+        <servlet-class>com.groupdocs.viewer.samples.javaweb.servlet.GetHtmlRecoucesHandlerServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -162,7 +162,7 @@
     
      <servlet>
         <servlet-name>GetDocumentPageHtmlHandlerServlet</servlet-name>
-        <servlet-class>com.groupdocs.viewer.samples.javaweb.GetDocumentPageHtmlHandlerServlet</servlet-class>
+        <servlet-class>com.groupdocs.viewer.samples.javaweb.servlet.GetDocumentPageHtmlHandlerServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>

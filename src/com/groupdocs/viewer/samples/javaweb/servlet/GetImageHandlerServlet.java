@@ -1,4 +1,4 @@
-package com.groupdocs.viewer.samples.javaweb;
+package com.groupdocs.viewer.samples.javaweb.servlet;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;

@@ -1,4 +1,4 @@
-package com.groupdocs.viewer.samples.javaweb;
+package com.groupdocs.viewer.samples.javaweb.servlet;
 
 import com.groupdocs.viewer.domain.FileId;
 import com.groupdocs.viewer.domain.FilePath;
@@ -39,8 +39,9 @@ public class IndexServlet extends ViewerServlet{
             initFilePath = groupdocsFilePath.getPath();
         }
         
-        request.setAttribute("filePath", initFilePath);
+        String viewerId = "test";
         request.setAttribute("viewer_head", viewerHandler.getHeader());
+        request.setAttribute("viewerScript", viewerHandler.getViewerScript(viewerId, initFilePath, viewerHandler.getLocale()));
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("viewer/index.jsp");
         requestDispatcher.forward(request, response);
     }

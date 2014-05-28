@@ -19,64 +19,6 @@
             </form>
         </div>
         <div id="test"></div>
-        <script>
-             $(function () { 
-                var localizedStrings = 'null';
-                var thumbsImageBase64Encoded = null;
-                $('#test').groupdocsViewer({ 
-                    filePath: '<%=(String)request.getAttribute("filePath")%>',
-                    quality: 100, 
-                    showThumbnails: true, 
-                    openThumbnails: true, 
-                    initialZoom: 100, 
-                    zoomToFitWidth: true, 
-                    zoomToFitHeight: false, 
-                    width: 1000, 
-                    height: 500, 
-                    backgroundColor: '', 
-                    showFolderBrowser: true, 
-                    showPrint: true, 
-                    showDownload: true, 
-                    showZoom: true, 
-                    showPaging: true, 
-                    showViewerStyleControl: true, 
-                    showSearch: true, 
-                    preloadPagesCount: 2, 
-                    viewerStyle: 1, 
-                    supportTextSelection: true, 
-                    usePdfPrinting: false, 
-                    localizedStrings: localizedStrings, 
-                    thumbsImageBase64Encoded: thumbsImageBase64Encoded, 
-                    toolbarButtonsBoxShadowStyle: '', 
-                    toolbarButtonsBoxShadowHoverStyle: '',
-                    thumbnailsContainerBackgroundColor: '', 
-                    thumbnailsContainerBorderRightColor: '',
-                    toolbarBorderBottomColor: '', 
-                    toolbarInputFieldBorderColor: '',
-                    toolbarButtonBorderColor: '', 
-                    toolbarButtonBorderHoverColor: '',
-                    thumbnailsContainerWidth: 0,
-                    jqueryFileDownloadCookieName: 'jqueryFileDownloadJSForGD', 
-                    showDownloadErrorsInPopup: false,
-                    showImageWidth: false, 
-                    showHeader: true,
-                    minimumImageWidth: 0, 
-                    enableStandardErrorHandling: true,
-                    useHtmlBasedEngine: true, 
-                    useImageBasedPrinting: true, 
-                    fileDisplayName: '', 
-                    downloadPdfFile: false,
-                    searchForSeparateWords: false,
-                    preventTouchEventsBubbling: false, 
-                    useInnerThumbnails: true,
-                    watermarkText: '', 
-                    supportPageReordering: false,
-                    watermarkFontSize: null,
-                    watermarkColor: null,
-                    watermarkLeft: null,
-                    watermarkTop: null
-                }); 
-            }); 
-        </script>
+        <%=(String)request.getAttribute("viewerScript")%>
     </body>
 </html>

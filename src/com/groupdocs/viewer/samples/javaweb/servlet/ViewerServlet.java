@@ -1,7 +1,8 @@
-package com.groupdocs.viewer.samples.javaweb;
+package com.groupdocs.viewer.samples.javaweb.servlet;
 
 import com.groupdocs.viewer.config.ServiceConfiguration;
 import com.groupdocs.viewer.handlers.ViewerHandler;
+import com.groupdocs.viewer.samples.javaweb.config.Configuration;
 import org.apache.log4j.Logger;
 
 import javax.servlet.ServletException;
@@ -20,11 +21,7 @@ public abstract class ViewerServlet extends HttpServlet {
     @Override
     public void init() throws ServletException {
         try {
-            final String appPath = "http://127.0.0.1:8080/document-viewer/";
-            final String basePath = "E:\\Projects\\GroupDocs\\app\\xFiles\\";
-            final String licensePath = null;
-            final int width = 1000;
-            final ServiceConfiguration config = new ServiceConfiguration(appPath, basePath, licensePath, Boolean.FALSE, Boolean.FALSE, width);
+            final ServiceConfiguration config = new ServiceConfiguration(new Configuration());
             viewerHandler = new ViewerHandler(config);
         } catch (Exception ex) {
             Logger.getLogger(this.getClass()).error(ex);
