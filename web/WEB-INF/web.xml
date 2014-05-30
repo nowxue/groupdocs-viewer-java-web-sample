@@ -160,7 +160,7 @@
     </servlet-mapping>
     
     
-     <servlet>
+    <servlet>
         <servlet-name>GetDocumentPageHtmlHandlerServlet</servlet-name>
         <servlet-class>com.groupdocs.viewer.samples.javaweb.servlet.GetDocumentPageHtmlHandlerServlet</servlet-class>
     </servlet>
@@ -168,6 +168,16 @@
     <servlet-mapping>
         <servlet-name>GetDocumentPageHtmlHandlerServlet</servlet-name>
         <url-pattern>/document-viewer/GetDocumentPageHtmlHandler</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>GetPdfWithPrintDialogServlet</servlet-name>
+        <servlet-class>com.groupdocs.viewer.samples.javaweb.servlet.GetPdfWithPrintDialogServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>GetPdfWithPrintDialogServlet</servlet-name>
+        <url-pattern>/document-viewer/GetPdfWithPrintDialog</url-pattern>
     </servlet-mapping>
     
 
