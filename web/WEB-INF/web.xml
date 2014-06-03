@@ -180,6 +180,16 @@
         <url-pattern>/document-viewer/GetPdfWithPrintDialog</url-pattern>
     </servlet-mapping>
     
+    <servlet>
+        <servlet-name>ReorderPageHandlerServlet</servlet-name>
+        <servlet-class>com.groupdocs.viewer.samples.javaweb.servlet.ReorderPageHandlerServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ReorderPageHandlerServlet</servlet-name>
+        <url-pattern>/document-viewer/ReorderPageHandler</url-pattern>
+    </servlet-mapping>
+    
 
     <!-- CORS -->
     <filter>
