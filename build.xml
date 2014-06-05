@@ -36,10 +36,10 @@
             <fileset file="${project.m2.home}/${project.viewer.path}" />
         </copy>
         <copy todir="${project.build.dir}/viewer">
-            <fileset dir="${project.view.dir}" />
+            <fileset dir="${project.view.dir}"/>
         </copy>
         <copy todir="${project.build.dir}/WEB-INF/classes">
-            <fileset dir="src" includes="log4j.properties"/>
+            <fileset dir="src"/>
         </copy>
     </target>
 
