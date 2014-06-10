@@ -67,6 +67,11 @@ public class Configuration implements ServiceConfigurationBase{
     public boolean isUseCache() {
         return Boolean.valueOf(properties.getProperty("groupdocs.viewer.useCache"));
     }
+    
+    @Override
+    public boolean isUseBrowserCache(){
+        return Boolean.valueOf(properties.getProperty("groupdocs.viewer.useBrowserCache"));
+    }
 
     @Override
     public int getExpirationDate() {
