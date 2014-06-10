@@ -1,11 +1,16 @@
 package com.groupdocs.viewer.samples.javaweb.servlet;
 
+import com.groupdocs.viewer.config.ServiceConfiguration;
 import com.groupdocs.viewer.domain.FileId;
 import com.groupdocs.viewer.domain.FilePath;
 import com.groupdocs.viewer.domain.FileUrl;
 import com.groupdocs.viewer.domain.GroupDocsPath;
 import com.groupdocs.viewer.domain.TokenId;
+import com.groupdocs.viewer.handlers.ViewerHandler;
+import com.groupdocs.viewer.samples.javaweb.config.Configuration;
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -19,6 +24,16 @@ public class IndexServlet extends ViewerServlet{
     
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        if(viewerHandler == null){
+            try {
+                final Configuration sampleConfig = new Configuration();
+                sampleConfig.setApplicationPath(request.getRequestURL().toString());
+                final ServiceConfiguration config = new ServiceConfiguration(sampleConfig);
+                viewerHandler = new ViewerHandler(config);
+            } catch (Exception ex) {
+                Logger.getLogger(IndexServlet.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
         String fileId = request.getParameter("fileId");
         String filePath = request.getParameter("filePath");
         String tokenId = request.getParameter("tokenId");

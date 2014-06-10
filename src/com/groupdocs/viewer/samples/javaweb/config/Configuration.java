@@ -13,16 +13,28 @@ import java.util.logging.Logger;
  */
 public class Configuration implements ServiceConfigurationBase{
     private Properties properties;
+    private String applicationPath;
     
     public Configuration(){
         if(properties == null){
             properties = new Properties();
+            InputStream is = null;
             try {
-                InputStream is = getClass().getClassLoader().getResourceAsStream("application.properties");
+                // Load property file
+                is = getClass().getClassLoader().getResourceAsStream("application.properties");
                 properties.load(is);
-                is.close();
+                // Set applicationPath
+                applicationPath = properties.getProperty("groupdocs.viewer.applicationPath");
             } catch (IOException ex) {
                 Logger.getLogger(Configuration.class.getName()).log(Level.SEVERE, null, ex);
+            }finally{
+                try {
+                    if(is != null){
+                        is.close();
+                    }
+                } catch (IOException ex) {
+                    Logger.getLogger(Configuration.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         }
     }
@@ -34,7 +46,11 @@ public class Configuration implements ServiceConfigurationBase{
 
     @Override
     public String getApplicationPath() {
-        return properties.getProperty("groupdocs.viewer.applicationPath");
+        return applicationPath;
+    }
+    
+    public void setApplicationPath(String applicationPath){
+        this.applicationPath = applicationPath;
     }
 
     @Override
