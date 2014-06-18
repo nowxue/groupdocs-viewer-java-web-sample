@@ -75,6 +75,11 @@ public class Configuration implements ServiceConfigurationBase{
     public String getEncryptionKey() {
         return properties.getProperty("groupdocs.viewer.encKey");
     }
+    
+    @Override
+    public String getLocalesPath() {
+        return properties.getProperty("groupdocs.viewer.localesPath");
+    }
 
     @Override
     public int getQuality() {
