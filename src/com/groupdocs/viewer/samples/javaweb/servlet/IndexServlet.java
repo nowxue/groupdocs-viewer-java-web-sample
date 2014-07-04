@@ -1,10 +1,8 @@
 package com.groupdocs.viewer.samples.javaweb.servlet;
 
-import com.groupdocs.viewer.domain.FileId;
-import com.groupdocs.viewer.domain.FilePath;
-import com.groupdocs.viewer.domain.FileUrl;
-import com.groupdocs.viewer.domain.GroupDocsPath;
-import com.groupdocs.viewer.domain.TokenId;
+import com.groupdocs.viewer.domain.path.EncodedPath;
+import com.groupdocs.viewer.domain.path.GroupDocsPath;
+import com.groupdocs.viewer.domain.path.TokenId;
 import java.io.IOException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -19,29 +17,24 @@ public class IndexServlet extends ViewerServlet{
     
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String fileId = request.getParameter("fileId");
-        String filePath = request.getParameter("filePath");
+        String file = request.getParameter("file");
         String tokenId = request.getParameter("tokenId");
-        String fileUrl = request.getParameter("fileUrl");
 
-        String initFilePath = "";
-        GroupDocsPath groupdocsFilePath = null;
-        if(fileId != null && !fileId.isEmpty()){
-            groupdocsFilePath = new FileId(fileId);
-        }else if(filePath != null && !filePath.isEmpty()){
-            groupdocsFilePath = new FilePath(filePath, viewerHandler.getConfiguration());
+        GroupDocsPath path = null;
+        if(file != null && !file.isEmpty()){
+            path = new EncodedPath(file, viewerHandler.getConfiguration());
         }else if(tokenId != null && !tokenId.isEmpty()){
-            groupdocsFilePath = new TokenId(tokenId, null);
-        }else if(fileUrl != null && !fileUrl.isEmpty()){
-            groupdocsFilePath = new FileUrl(fileUrl);
-        }
-        if(groupdocsFilePath != null){
-            initFilePath = groupdocsFilePath.getPath();
+            TokenId tki = new TokenId(tokenId, viewerHandler.getConfiguration().getEncryptionKey());
+            if(!tki.isExpired()){
+                path = tki;
+            }
         }
         
         String viewerId = "test";
+        String initialFilePath = (path == null) ? "" : path.getPath();
+        String locale = viewerHandler.getLocale();
         request.setAttribute("viewer_head", viewerHandler.getHeader());
-        request.setAttribute("viewerScript", viewerHandler.getViewerScript(viewerId, initFilePath, viewerHandler.getLocale()));
+        request.setAttribute("viewerScript", viewerHandler.getViewerScript(viewerId, initialFilePath, locale));
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("viewer/index.jsp");
         requestDispatcher.forward(request, response);
     }
