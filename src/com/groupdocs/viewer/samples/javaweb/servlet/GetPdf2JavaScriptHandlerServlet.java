@@ -1,5 +1,6 @@
 package com.groupdocs.viewer.samples.javaweb.servlet;
 
+import com.groupdocs.viewer.samples.javaweb.domain.media.MediaType;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -18,7 +19,7 @@ public class GetPdf2JavaScriptHandlerServlet extends ViewerServlet{
 
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        writeOutput("application/json", response, viewerHandler.getPdf2JavaScriptHandler(request, response));
+        writeOutput(MediaType.APPLICATION_JSON, response, viewerHandler.getPdf2JavaScriptHandler(request, response));
     }
     
 }
