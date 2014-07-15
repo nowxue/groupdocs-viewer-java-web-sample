@@ -26,7 +26,7 @@ public class UploadFileHandlerServlet extends ViewerServlet{
                 String fileName = extractFileName(part);
                 String uploadResponse = (String) viewerHandler.uploadFile(part.getInputStream(), fileName, 0);
                 JSONObject obj = new JSONObject(uploadResponse);
-                response.sendRedirect("?tokenId=" + obj.getString("tokenId"));
+                response.sendRedirect("view?tokenId=" + obj.getString("tokenId"));
                 return;
             } catch (JSONException ex) {
                 Logger.getLogger(UploadFileHandlerServlet.class.getName()).log(Level.SEVERE, null, ex);
