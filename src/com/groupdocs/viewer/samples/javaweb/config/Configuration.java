@@ -335,5 +335,10 @@ public class Configuration implements ServiceConfigurationBase{
     public boolean isUseEmScaling() {
         return Boolean.valueOf(properties.getProperty("groupdocs.viewer.useEmScaling"));
     }
+
+    @Override
+    public String getUploadPath() {
+        return properties.getProperty("groupdocs.viewer.uploadPath");
+    }
     
 }
