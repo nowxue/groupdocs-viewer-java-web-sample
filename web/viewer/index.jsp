@@ -8,7 +8,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>GroupDocs.Viewer for Java Sample</title>
+        <title>GroupDocs.Viewer for Java Servlets Sample</title>
         <%=(String)request.getAttribute("viewer_head")%>
     </head>
     <body>

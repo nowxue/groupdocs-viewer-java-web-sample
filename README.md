@@ -1,6 +1,13 @@
-Groupdocs.Viewer for Java (Servlets Sample) 2.4.0
-=================================================
+##GroupDocs.Viewer for Java
+####Servlets Sample 2.4.1
+![Alt text](https://media.licdn.com/media/p/7/005/059/258/39b2da3.png "Optional title")
 
+<br/><br/>
+
+How-to install/run
+------
+
+#####Windows/Linux/MacOS
 1. Download and extract GroupDocs.Viewer for Java into desired directory. http://groupdocs.com/java/document-viewer-library
 2. Download sample source code to any directory.
 3. Open file `build.properties`. Update `project.viewer.path` property (on line 3) and `project.tomcat.home` property (on line 11).
@@ -10,3 +17,11 @@ Groupdocs.Viewer for Java (Servlets Sample) 2.4.0
 7. Copy war file into your tomcat webapps directory.
 8. Run tomcat.
 9. Open URL `http://127.0.0.1:8080/document-viewer/` in your browser, make sure that port 8080 is free (you can change port number in your tomcat configuration)
+<br/><br/>
+<br/><br/>
+
+Description
+---------------
+A powerful document viewer API that allows you to display over 50 document formats in your Java applications. The viewer can work two ways: by rasterizing documents or by converting them to a combination of SVG, HTML and CSS. Both methods deliver high-fidelity rendering.
+
+Supported file formats include: Microsoft Office, Visio, Project and Outlook documents, PDFs, AutoCAD, image files (TIFF, JPG, BMP, GIF, TIFF, etc.) and more.
