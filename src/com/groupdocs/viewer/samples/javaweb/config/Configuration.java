@@ -1,6 +1,6 @@
 package com.groupdocs.viewer.samples.javaweb.config;
 
-import com.groupdocs.viewer.config.ServiceConfigurationBase;
+import com.groupdocs.viewer.config.IServiceConfiguration;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
@@ -11,7 +11,7 @@ import java.util.logging.Logger;
  *
  * @author Alex Bobkov
  */
-public class Configuration implements ServiceConfigurationBase{
+public class Configuration implements IServiceConfiguration{
     private Properties properties;
     
     public Configuration(){
@@ -37,8 +37,18 @@ public class Configuration implements ServiceConfigurationBase{
     }
 
     @Override
+    public String getFileDisplayName() {
+        return properties.getProperty("groupdocs.viewer.fileDisplayName");
+    }
+
+    @Override
+    public String getJqueryFileDownloadCookieName() {
+        return properties.getProperty("groupdocs.viewer.fileDisplayName");
+    }
+
+    @Override
     public String getLicensePath() {
-        return properties.getProperty("groupdocs.viewer.licensePath");
+        return properties.getProperty("groupdocs.viewer.jqueryFileDownloadCookieName");
     }
 
     @Override
@@ -52,22 +62,57 @@ public class Configuration implements ServiceConfigurationBase{
     }
 
     @Override
-    public boolean isUseAuthorization() {
+    public Integer getWatermarkFontSize() {
+        return Integer.valueOf(properties.getProperty("groupdocs.viewer.watermarkFontSize"));
+    }
+
+    @Override
+    public String getWatermarkPosition() {
+        return properties.getProperty("groupdocs.viewer.watermarkPosition");
+    }
+
+    @Override
+    public Boolean isConvertWordDocumentsCompletely() {
+        return Boolean.valueOf(properties.getProperty("groupdocs.viewer.convertWordDocumentsCompletely"));
+    }
+
+    @Override
+    public Boolean isIgnoreDocumentAbsence() {
+        return Boolean.valueOf(properties.getProperty("groupdocs.viewer.ignoreDocumentAbsence"));
+    }
+
+    @Override
+    public Boolean isPreloadPagesOnBrowserSide() {
+        return Boolean.valueOf(properties.getProperty("groupdocs.viewer.preloadPagesOnBrowserSide"));
+    }
+
+    @Override
+    public Boolean isPrintWithWatermark() {
+        return Boolean.valueOf(properties.getProperty("groupdocs.viewer.printWithWatermark"));
+    }
+
+    @Override
+    public Boolean isSupportPageRotation() {
+        return Boolean.valueOf(properties.getProperty("groupdocs.viewer.supportPageRotation"));
+    }
+
+    @Override
+    public Boolean isUseAuthorization() {
         return Boolean.valueOf(properties.getProperty("groupdocs.viewer.useAuthorization"));
     }
 
     @Override
-    public boolean isUseCache() {
+    public Boolean isUseCache() {
         return Boolean.valueOf(properties.getProperty("groupdocs.viewer.useCache"));
     }
     
     @Override
-    public boolean isUseBrowserCache(){
+    public Boolean isUseBrowserCache(){
         return Boolean.valueOf(properties.getProperty("groupdocs.viewer.useBrowserCache"));
     }
 
     @Override
-    public int getExpirationDate() {
+    public Integer getExpirationDate() {
         return Integer.valueOf(properties.getProperty("groupdocs.viewer.expirationDate"));
     }
 
@@ -82,42 +127,42 @@ public class Configuration implements ServiceConfigurationBase{
     }
 
     @Override
-    public int getQuality() {
+    public Integer getQuality() {
         return Integer.valueOf(properties.getProperty("groupdocs.viewer.quality"));
     }
 
     @Override
-    public boolean isShowThumbnails() {
+    public Boolean isShowThumbnails() {
         return Boolean.valueOf(properties.getProperty("groupdocs.viewer.showThumbnails"));
     }
 
     @Override
-    public boolean isOpenThumbnails() {
+    public Boolean isOpenThumbnails() {
         return Boolean.valueOf(properties.getProperty("groupdocs.viewer.openThumbnails"));
     }
 
     @Override
-    public int getInitialZoom() {
+    public Integer getInitialZoom() {
         return Integer.valueOf(properties.getProperty("groupdocs.viewer.initialZoom"));
     }
 
     @Override
-    public boolean isZoomToFitWidth() {
+    public Boolean isZoomToFitWidth() {
         return Boolean.valueOf(properties.getProperty("groupdocs.viewer.zoomToFitWidth"));
     }
 
     @Override
-    public boolean isZoomToFitHeight() {
+    public Boolean isZoomToFitHeight() {
         return Boolean.valueOf(properties.getProperty("groupdocs.viewer.zoomToFitHeight"));
     }
 
     @Override
-    public int getWidth() {
+    public Integer getWidth() {
         return Integer.valueOf(properties.getProperty("groupdocs.viewer.width"));
     }
 
     @Override
-    public int getHeight() {
+    public Integer getHeight() {
         return Integer.valueOf(properties.getProperty("groupdocs.viewer.height"));
     }
 
@@ -127,57 +172,57 @@ public class Configuration implements ServiceConfigurationBase{
     }
 
     @Override
-    public boolean isShowFolderBrowser() {
+    public Boolean isShowFolderBrowser() {
         return Boolean.valueOf(properties.getProperty("groupdocs.viewer.showFolderBrowser"));
     }
 
     @Override
-    public boolean isShowPrint() {
+    public Boolean isShowPrint() {
         return Boolean.valueOf(properties.getProperty("groupdocs.viewer.showPrint"));
     }
 
     @Override
-    public boolean isShowDownload() {
+    public Boolean isShowDownload() {
         return Boolean.valueOf(properties.getProperty("groupdocs.viewer.showDownload"));
     }
 
     @Override
-    public boolean isShowZoom() {
+    public Boolean isShowZoom() {
         return Boolean.valueOf(properties.getProperty("groupdocs.viewer.showZoom"));
     }
 
     @Override
-    public boolean isShowPaging() {
+    public Boolean isShowPaging() {
         return Boolean.valueOf(properties.getProperty("groupdocs.viewer.showPaging"));
     }
 
     @Override
-    public boolean isShowViewerStyleControl() {
+    public Boolean isShowViewerStyleControl() {
         return Boolean.valueOf(properties.getProperty("groupdocs.viewer.showViewerStyleControl"));
     }
 
     @Override
-    public boolean isShowSearch() {
+    public Boolean isShowSearch() {
         return Boolean.valueOf(properties.getProperty("groupdocs.viewer.showSearch"));
     }
 
     @Override
-    public int getPreloadPagesCount() {
+    public Integer getPreloadPagesCount() {
         return Integer.valueOf(properties.getProperty("groupdocs.viewer.preloadPagesCount"));
     }
 
     @Override
-    public int getViewerStyle() {
+    public Integer getViewerStyle() {
         return Integer.valueOf(properties.getProperty("groupdocs.viewer.viewerStyle"));
     }
 
     @Override
-    public boolean isSupportTextSelection() {
+    public Boolean isSupportTextSelection() {
         return Boolean.valueOf(properties.getProperty("groupdocs.viewer.supportTextSelection"));
     }
 
     @Override
-    public boolean isUsePdfPrinting() {
+    public Boolean isUsePdfPrinting() {
         return Boolean.valueOf(properties.getProperty("groupdocs.viewer.usePdfPrinting"));
     }
 
@@ -222,62 +267,62 @@ public class Configuration implements ServiceConfigurationBase{
     }
 
     @Override
-    public int getThumbnailsContainerWidth() {
+    public Integer getThumbnailsContainerWidth() {
         return Integer.valueOf(properties.getProperty("groupdocs.viewer.thumbnailsContainerWidth"));
     }
 
     @Override
-    public boolean isShowDownloadErrorsInPopup() {
+    public Boolean isShowDownloadErrorsInPopup() {
         return Boolean.valueOf(properties.getProperty("groupdocs.viewer.showDownloadErrorsInPopup"));
     }
 
     @Override
-    public boolean isShowImageWidth() {
+    public Boolean isShowImageWidth() {
         return Boolean.valueOf(properties.getProperty("groupdocs.viewer.showImageWidth"));
     }
 
     @Override
-    public boolean isShowHeader() {
+    public Boolean isShowHeader() {
         return Boolean.valueOf(properties.getProperty("groupdocs.viewer.showHeader"));
     }
 
     @Override
-    public int getMinimumImageWidth() {
+    public Integer getMinimumImageWidth() {
         return Integer.valueOf(properties.getProperty("groupdocs.viewer.minimumImageWidth"));
     }
 
     @Override
-    public boolean isEnableStandardErrorHandling() {
+    public Boolean isEnableStandardErrorHandling() {
         return Boolean.valueOf(properties.getProperty("groupdocs.viewer.enableStandardErrorHandling"));
     }
 
     @Override
-    public boolean isUseHtmlBasedEngine() {
+    public Boolean isUseHtmlBasedEngine() {
         return Boolean.valueOf(properties.getProperty("groupdocs.viewer.useHtmlBasedEngine"));
     }
 
     @Override
-    public boolean isUseImageBasedPrinting() {
+    public Boolean isUseImageBasedPrinting() {
         return Boolean.valueOf(properties.getProperty("groupdocs.viewer.useImageBasedPrinting"));
     }
 
     @Override
-    public boolean isDownloadPdfFile() {
+    public Boolean isDownloadPdfFile() {
         return Boolean.valueOf(properties.getProperty("groupdocs.viewer.downloadPdfFile"));
     }
 
     @Override
-    public boolean isSearchForSeparateWords() {
+    public Boolean isSearchForSeparateWords() {
         return Boolean.valueOf(properties.getProperty("groupdocs.viewer.searchForSeparateWords"));
     }
 
     @Override
-    public boolean isPreventTouchEventsBubbling() {
+    public Boolean isPreventTouchEventsBubbling() {
         return Boolean.valueOf(properties.getProperty("groupdocs.viewer.preventTouchEventsBubbling"));
     }
 
     @Override
-    public boolean isUseInnerThumbnails() {
+    public Boolean isUseInnerThumbnails() {
         return Boolean.valueOf(properties.getProperty("groupdocs.viewer.useInnerThumbnails"));
     }
 
@@ -292,12 +337,12 @@ public class Configuration implements ServiceConfigurationBase{
     }
 
     @Override
-    public boolean isSupportPageReordering() {
+    public Boolean isSupportPageReordering() {
         return Boolean.valueOf(properties.getProperty("groupdocs.viewer.supportPageReordering"));
     }
 
     @Override
-    public boolean isOnlyShrinkLargePages() {
+    public Boolean isOnlyShrinkLargePages() {
         return Boolean.valueOf(properties.getProperty("groupdocs.viewer.onlyShrinkLargePages"));
     }
 
@@ -312,33 +357,38 @@ public class Configuration implements ServiceConfigurationBase{
     }
 
     @Override
-    public boolean isTreatPhrasesInDoubleQuotesAsExactPhrases() {
+    public Boolean isTreatPhrasesInDoubleQuotesAsExactPhrases() {
         return Boolean.valueOf(properties.getProperty("groupdocs.viewer.treatPhrasesInDoubleQuotesAsExactPhrases"));
     }
 
     @Override
-    public boolean isUsePngImagesForHtmlBasedEngine() {
+    public Boolean isUsePngImagesForHtmlBasedEngine() {
         return Boolean.valueOf(properties.getProperty("groupdocs.viewer.usePngImagesForHtmlBasedEngine"));
     }
 
     @Override
-    public boolean isShowOnePageInRow() {
+    public Boolean isShowOnePageInRow() {
         return Boolean.valueOf(properties.getProperty("groupdocs.viewer.showOnePageInRow"));
     }
 
     @Override
-    public boolean isLoadAllPagesOnSearch() {
+    public Boolean isLoadAllPagesOnSearch() {
         return Boolean.valueOf(properties.getProperty("groupdocs.viewer.loadAllPagesOnSearch"));
     }
 
     @Override
-    public boolean isUseEmScaling() {
+    public Boolean isUseEmScaling() {
         return Boolean.valueOf(properties.getProperty("groupdocs.viewer.useEmScaling"));
     }
 
     @Override
     public String getUploadPath() {
         return properties.getProperty("groupdocs.viewer.uploadPath");
+    }
+
+    @Override
+    public Long getMaxCacheSize() {
+        return Long.valueOf(properties.getProperty("groupdocs.viewer.maxCacheSize"));
     }
     
 }
