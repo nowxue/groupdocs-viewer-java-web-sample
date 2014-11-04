@@ -190,6 +190,16 @@
         <url-pattern>/document-viewer/ReorderPageHandler</url-pattern>
     </servlet-mapping>
     
+    <servlet>
+        <servlet-name>RotatePageHandlerServlet</servlet-name>
+        <servlet-class>com.groupdocs.viewer.samples.javaweb.servlet.RotatePageHandlerServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>RotatePageHandlerServlet</servlet-name>
+        <url-pattern>/document-viewer/RotatePageHandler</url-pattern>
+    </servlet-mapping>
+    
 
     <!-- CORS -->
     <filter>
