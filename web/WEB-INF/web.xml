@@ -150,12 +150,12 @@
     
     
     <servlet>
-        <servlet-name>GetHtmlRecoucesHandlerServlet</servlet-name>
-        <servlet-class>com.groupdocs.viewer.samples.javaweb.servlet.GetHtmlRecoucesHandlerServlet</servlet-class>
+        <servlet-name>GetHtmlResourcesHandlerServlet</servlet-name>
+        <servlet-class>com.groupdocs.viewer.samples.javaweb.servlet.GetHtmlResourcesHandlerServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>GetHtmlRecoucesHandlerServlet</servlet-name>
+        <servlet-name>GetHtmlResourcesHandlerServlet</servlet-name>
         <url-pattern>/GetHtmlResources/*</url-pattern>
     </servlet-mapping>
     
