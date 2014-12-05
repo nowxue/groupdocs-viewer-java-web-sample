@@ -97,11 +97,6 @@ public class Configuration implements IServiceConfiguration{
     }
 
     @Override
-    public Boolean isUseAuthorization() {
-        return Boolean.valueOf(properties.getProperty("groupdocs.viewer.useAuthorization"));
-    }
-
-    @Override
     public Boolean isUseCache() {
         return Boolean.valueOf(properties.getProperty("groupdocs.viewer.useCache"));
     }
