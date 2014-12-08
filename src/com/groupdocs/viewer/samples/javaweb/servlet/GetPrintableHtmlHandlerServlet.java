@@ -19,7 +19,7 @@ public class GetPrintableHtmlHandlerServlet extends ViewerServlet{
 
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        writeOutput(MediaType.TEXT_HTML, response, viewerHandler.getPrintableHtmlHandler(request, response));
+        writeOutput(MediaType.APPLICATION_JSON, response, viewerHandler.getPrintableHtmlHandler(request, response));
     }
     
 }
