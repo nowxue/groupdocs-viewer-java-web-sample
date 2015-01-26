@@ -5,6 +5,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * @author Alex Bobkov, Aleksey Permyakov
@@ -12,9 +14,13 @@ import java.io.InputStream;
 public class GetImageHandlerServlet extends ViewerServlet {
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String contextPath = request.getPathInfo();
-        String[] path = contextPath.split("/");
-        writeOutput((InputStream) viewerHandler.getImageHandler(path[path.length - 1], response), response);
+        try {
+            String contextPath = request.getPathInfo();
+            String[] path = contextPath.split("/");
+            writeOutput((InputStream) viewerHandler.getImageHandler(path[path.length - 1], response), response);
+        } catch (Exception ex) {
+            Logger.getLogger(GetImageHandlerServlet.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
 }
