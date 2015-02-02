@@ -21,8 +21,9 @@ public class GetDocumentPageImageHandlerServlet extends ViewerServlet{
             int quality = Integer.valueOf(request.getParameter("quality"));
             boolean usePdf = Boolean.valueOf(request.getParameter("usePdf"));
             int pageIndex = Integer.valueOf(request.getParameter("pageIndex"));
+            boolean isPrint = Boolean.valueOf(request.getParameter("isPrint"));
             String path = request.getParameter("path");
-            writeOutput((InputStream) viewerHandler.getDocumentPageImageHandler(path, width, quality, usePdf, pageIndex, response), response);
+            writeOutput((InputStream) viewerHandler.getDocumentPageImageHandler(path, width, quality, usePdf, pageIndex, isPrint, response), response);
         } catch (Exception ex) {
             Logger.getLogger(GetDocumentPageImageHandlerServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
