@@ -43,12 +43,12 @@ public class Configuration implements IServiceConfiguration{
 
     @Override
     public String getJqueryFileDownloadCookieName() {
-        return properties.getProperty("groupdocs.viewer.fileDisplayName");
+        return properties.getProperty("groupdocs.viewer.jqueryFileDownloadCookieName");
     }
 
     @Override
     public String getLicensePath() {
-        return properties.getProperty("groupdocs.viewer.jqueryFileDownloadCookieName");
+        return properties.getProperty("groupdocs.viewer.licensePath");
     }
 
     @Override
