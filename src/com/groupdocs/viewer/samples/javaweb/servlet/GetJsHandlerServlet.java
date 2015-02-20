@@ -15,7 +15,7 @@ public class GetJsHandlerServlet extends ViewerServlet {
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
-            writeOutput((InputStream) viewerHandler.getJsHandler(request.getParameter("script"), response), response);
+            writeOutput(viewerHandler.getJsHandler(request.getParameter("script"), request, response), response);
         } catch (Exception ex) {
             Logger.getLogger(GetJsHandlerServlet.class.getName()).log(Level.SEVERE, null, ex);
         }

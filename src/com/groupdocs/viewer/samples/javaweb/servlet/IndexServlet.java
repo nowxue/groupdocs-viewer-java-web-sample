@@ -27,7 +27,7 @@ public class IndexServlet extends ViewerServlet{
             if(file != null && !file.isEmpty()){
                 path = new EncodedPath(file, viewerHandler.getConfiguration());
             }else if(tokenId != null && !tokenId.isEmpty()){
-                TokenId tki = new TokenId(tokenId, viewerHandler.getConfiguration().getEncryptionKey());
+                TokenId tki = new TokenId(tokenId, viewerHandler.getConfiguration().getConfig().getEncryptionKey());
                 if(!tki.isExpired()){
                     path = tki;
                 }

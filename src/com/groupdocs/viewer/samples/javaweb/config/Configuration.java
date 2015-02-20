@@ -385,5 +385,10 @@ public class Configuration implements IServiceConfiguration{
     public Long getMaxCacheSize() {
         return Long.valueOf(properties.getProperty("groupdocs.viewer.maxCacheSize"));
     }
+
+    @Override
+    public String getCachePath() {
+        return properties.getProperty("groupdocs.viewer.cachePath");
+    }
     
 }

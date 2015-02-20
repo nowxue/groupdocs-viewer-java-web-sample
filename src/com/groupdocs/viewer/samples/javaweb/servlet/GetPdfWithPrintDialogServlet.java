@@ -16,7 +16,7 @@ public class GetPdfWithPrintDialogServlet extends ViewerServlet{
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
-            writeOutput((InputStream) viewerHandler.getPdfWithPrintDialog(request.getParameter("path"), response), response);
+            viewerHandler.getPdfWithPrintDialog(request.getParameter("path"), response);
         } catch (Exception ex) {
             Logger.getLogger(GetPdfWithPrintDialogServlet.class.getName()).log(Level.SEVERE, null, ex);
         }

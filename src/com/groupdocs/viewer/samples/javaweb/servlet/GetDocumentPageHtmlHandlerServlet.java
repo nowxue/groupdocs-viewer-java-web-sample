@@ -1,7 +1,6 @@
 package com.groupdocs.viewer.samples.javaweb.servlet;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.ServletException;
@@ -17,7 +16,7 @@ public class GetDocumentPageHtmlHandlerServlet extends ViewerServlet{
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
         try {
-            writeOutput((InputStream) viewerHandler.getDocumentPageHtmlHandler(request, response), response);
+            writeOutput(viewerHandler.getDocumentPageHtmlHandler(request, response), response);
         } catch (Exception ex) {
             Logger.getLogger(GetDocumentPageHtmlHandlerServlet.class.getName()).log(Level.SEVERE, null, ex);
         }

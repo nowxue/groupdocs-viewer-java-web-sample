@@ -1,7 +1,6 @@
 package com.groupdocs.viewer.samples.javaweb.servlet;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.ServletException;
@@ -19,7 +18,7 @@ public class GetFontHandlerServlet extends ViewerServlet{
         try {
             String pathInfo = request.getPathInfo();
             String[] path = pathInfo.split("/");
-            writeOutput((InputStream) viewerHandler.getFontHandler(path[path.length - 1], response), response);
+            writeOutput(viewerHandler.getFontHandler(path[path.length - 1], request, response), response);
         } catch (Exception ex) {
             Logger.getLogger(GetFontHandlerServlet.class.getName()).log(Level.SEVERE, null, ex);
         }

@@ -53,7 +53,11 @@ public abstract class ViewerServlet extends HttpServlet {
         }
     }
     
-    protected void writeOutput(InputStream inputStream, HttpServletResponse response) throws IOException{
-        IOUtils.copy(inputStream, response.getOutputStream());
+    protected void writeOutput(Object inputStream, HttpServletResponse response) throws IOException{
+        if(inputStream != null){
+            IOUtils.copy((InputStream) inputStream, response.getOutputStream());
+        }else{
+            response.setStatus(HttpServletResponse.SC_NOT_MODIFIED);
+        }
     }
 }
