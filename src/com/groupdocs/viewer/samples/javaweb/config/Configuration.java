@@ -390,5 +390,10 @@ public class Configuration implements IServiceConfiguration{
     public String getCachePath() {
         return properties.getProperty("groupdocs.viewer.cachePath");
     }
+
+    @Override
+    public String getEncoding() {
+        return properties.getProperty("groupdocs.viewer.encoding");
+    }
     
 }
