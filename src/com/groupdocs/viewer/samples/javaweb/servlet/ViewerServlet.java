@@ -28,7 +28,7 @@ public abstract class ViewerServlet extends HttpServlet {
         try {
             if(viewerHandler == null){
                 final ServiceConfiguration config = new ServiceConfiguration(new Configuration());
-                viewerHandler = new ViewerHandler(config /*, new LocalHtmlCacheHandler(config.getCachePath())*/);
+                viewerHandler = new ViewerHandler(config /*, new CustomHtmlCacheHandler(config.getCachePath())*/);
             }
         } catch (Exception ex) {
             Logger.getLogger(this.getClass()).error(ex);
