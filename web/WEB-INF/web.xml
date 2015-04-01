@@ -96,17 +96,6 @@
 
 
     <servlet>
-        <servlet-name>GetPdf2JavaScriptHandlerServlet</servlet-name>
-        <servlet-class>com.groupdocs.viewer.samples.javaweb.servlet.GetPdf2JavaScriptHandlerServlet</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>GetPdf2JavaScriptHandlerServlet</servlet-name>
-        <url-pattern>/document-viewer/GetPdf2JavaScriptHandler</url-pattern>
-    </servlet-mapping>
-
-
-    <servlet>
         <servlet-name>GetPrintableHtmlHandlerServlet</servlet-name>
         <servlet-class>com.groupdocs.viewer.samples.javaweb.servlet.GetPrintableHtmlHandlerServlet</servlet-class>
     </servlet>
