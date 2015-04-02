@@ -16,7 +16,7 @@ public class GetHtmlResourcesHandlerServlet extends ViewerServlet{
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
         try {
-            writeOutput(viewerHandler.getHtmlResourcesHandler(request.getParameter("filePath"), response), response);
+            writeOutput(viewerHandler.getHtmlResourcesHandler(request.getParameter("filePath"), request.getParameter("guid"), Integer.valueOf(request.getParameter("page")), request.getParameter("resourceName"), response), response);
         } catch (Exception ex) {
             Logger.getLogger(GetHtmlResourcesHandlerServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
