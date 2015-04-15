@@ -5,6 +5,8 @@ import com.groupdocs.viewer.config.ServiceConfiguration;
 import com.groupdocs.viewer.handlers.ViewerHandler;
 import com.groupdocs.viewer.samples.javaweb.config.Configuration;
 import com.groupdocs.viewer.samples.javaweb.domain.media.MediaType;
+import com.groupdocs.viewer.utils.ByteArrayStreamUtils;
+import com.groupdocs.viewer.utils.Utils;
 import org.apache.log4j.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -35,20 +37,21 @@ public abstract class ViewerServlet extends HttpServlet {
         }
     }
 
-    protected void writeOutput(MediaType contentType, HttpServletResponse response, Object object) throws IOException{
+    protected void writeOutput(MediaType contentType, HttpServletResponse response, Object object) throws Exception {
         String json;
         if (object instanceof String) {
             json = (String) object;
         } else {
-            try (ByteArrayOutputStream outputStream = new ByteArrayOutputStream()) {
-                new ObjectMapper().writeValue(outputStream, object);
-                try (ByteArrayInputStream inputStream = new ByteArrayInputStream(outputStream.toByteArray())) {
-                    json = IOUtils.toString(inputStream);
-                }
+            ByteArrayStreamUtils streamUtils = new ByteArrayStreamUtils();
+            try {
+                new ObjectMapper().writeValue(streamUtils, object);
+                json = IOUtils.toString(streamUtils.getInputStream());
+            } finally {
+                Utils.closeStreams(streamUtils);
             }
         }
         response.getOutputStream().write(json.getBytes(DEFAULT_ENCODING));
-        if(contentType != null && !contentType.toString().isEmpty()){
+        if (contentType != null && !contentType.toString().isEmpty()) {
             response.setContentType(contentType.toString());
         }
     }
