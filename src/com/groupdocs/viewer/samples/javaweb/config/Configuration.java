@@ -11,7 +11,7 @@ import java.util.logging.Logger;
  *
  * @author Alex Bobkov
  */
-public class Configuration implements IServiceConfiguration{
+public class Configuration implements IServiceConfiguration {
     private Properties properties;
     
     public Configuration(){
@@ -395,5 +395,9 @@ public class Configuration implements IServiceConfiguration{
     public String getEncoding() {
         return properties.getProperty("groupdocs.viewer.encoding");
     }
-    
+
+    @Override
+    public String getFontsPath() {
+        return null;
+    }
 }
