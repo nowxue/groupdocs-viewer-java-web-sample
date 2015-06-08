@@ -222,6 +222,11 @@ public class Configuration implements IServiceConfiguration {
     }
 
     @Override
+    public Boolean isPdfPrintMarginsEnabled() {
+        return Boolean.valueOf(properties.getProperty("groupdocs.viewer.pdfPrintMarginsEnabled"));
+    }
+
+    @Override
     public String getToolbarButtonsBoxShadowStyle() {
         return properties.getProperty("groupdocs.viewer.toolbarButtonsBoxShadowStyle");
     }
