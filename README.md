@@ -15,8 +15,10 @@ How-to install/run
 5. Open cmd and run command `ant war`.
 6. Go to dist folder.
 7. Copy war file into your tomcat webapps directory.
+8. Delete `ROOT` folder in your tomcat webapps directory if it is exists
+9. Rename `document-viewer.war` to `ROOT.war`
 8. Run tomcat.
-9. Open URL `http://127.0.0.1:8080/document-viewer/` in your browser, make sure that port 8080 is free (you can change port number in your tomcat configuration)
+9. Open URL `http://127.0.0.1:8080/` in your browser, make sure that port 8080 is free (you can change port number in your tomcat configuration)
 <br/><br/>
 
 
