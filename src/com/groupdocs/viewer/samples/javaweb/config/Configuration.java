@@ -405,4 +405,9 @@ public class Configuration implements IServiceConfiguration {
     public String getFontsPath() {
         return null;
     }
+
+    @Override
+    public Integer getImageWebRequestTimeout() {
+        return 5000;
+    }
 }
