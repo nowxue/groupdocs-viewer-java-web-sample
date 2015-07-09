@@ -48,7 +48,11 @@ public class Configuration implements IServiceConfiguration {
 
     @Override
     public String getLicensePath() {
-        return properties.getProperty("groupdocs.viewer.licensePath");
+        String licensePath = properties.getProperty("groupdocs.viewer.licensePath");
+        if (licensePath == null || licensePath.isEmpty()) {
+            return System.getenv("GROUPDOCS_VIEWER");
+        }
+        return licensePath;
     }
 
     @Override
