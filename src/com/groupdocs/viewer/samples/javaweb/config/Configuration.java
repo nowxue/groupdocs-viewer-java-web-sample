@@ -48,7 +48,11 @@ public class Configuration implements IServiceConfiguration {
 
     @Override
     public String getLicensePath() {
-        return properties.getProperty("groupdocs.viewer.licensePath");
+        String licensePath = properties.getProperty("groupdocs.viewer.licensePath");
+        if (licensePath == null || licensePath.isEmpty()) {
+            return System.getenv("GROUPDOCS_VIEWER");
+        }
+        return licensePath;
     }
 
     @Override
@@ -404,5 +408,10 @@ public class Configuration implements IServiceConfiguration {
     @Override
     public String getFontsPath() {
         return null;
+    }
+
+    @Override
+    public Integer getImageWebRequestTimeout() {
+        return 5000;
     }
 }

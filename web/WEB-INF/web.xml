@@ -69,7 +69,7 @@
 
     <servlet-mapping>
         <servlet-name>GetDocumentPageImageHandlerServlet</servlet-name>
-        <url-pattern>/document-viewer/GetDocumentPageImageHandler/*</url-pattern>
+        <url-pattern>/GetDocumentPageImageHandler/*</url-pattern>
     </servlet-mapping>
     
 
@@ -80,7 +80,7 @@
 
     <servlet-mapping>
         <servlet-name>GetFileHandlerServlet</servlet-name>
-        <url-pattern>/document-viewer/GetFileHandler/*</url-pattern>
+        <url-pattern>/GetFileHandler/*</url-pattern>
     </servlet-mapping>
 
 
@@ -91,7 +91,7 @@
 
     <servlet-mapping>
         <servlet-name>GetImageUrlsHandlerServlet</servlet-name>
-        <url-pattern>/document-viewer/GetImageUrlsHandler</url-pattern>
+        <url-pattern>/GetImageUrlsHandler</url-pattern>
     </servlet-mapping>
 
 
@@ -102,7 +102,7 @@
 
     <servlet-mapping>
         <servlet-name>GetPrintableHtmlHandlerServlet</servlet-name>
-        <url-pattern>/document-viewer/GetPrintableHtmlHandler</url-pattern>
+        <url-pattern>/GetPrintableHtmlHandler</url-pattern>
     </servlet-mapping>
 
 
@@ -113,7 +113,7 @@
 
     <servlet-mapping>
         <servlet-name>LoadFileBrowserTreeDataHandlerServlet</servlet-name>
-        <url-pattern>/document-viewer/LoadFileBrowserTreeDataHandler</url-pattern>
+        <url-pattern>/LoadFileBrowserTreeDataHandler</url-pattern>
     </servlet-mapping>
 
 
@@ -124,7 +124,7 @@
 
     <servlet-mapping>
         <servlet-name>ViewDocumentHandlerServlet</servlet-name>
-        <url-pattern>/document-viewer/ViewDocumentHandler</url-pattern>
+        <url-pattern>/ViewDocumentHandler</url-pattern>
     </servlet-mapping>
     
     <servlet>
@@ -156,7 +156,7 @@
 
     <servlet-mapping>
         <servlet-name>GetDocumentPageHtmlHandlerServlet</servlet-name>
-        <url-pattern>/document-viewer/GetDocumentPageHtmlHandler</url-pattern>
+        <url-pattern>/GetDocumentPageHtmlHandler</url-pattern>
     </servlet-mapping>
     
     <servlet>
@@ -166,7 +166,7 @@
 
     <servlet-mapping>
         <servlet-name>GetPdfWithPrintDialogServlet</servlet-name>
-        <url-pattern>/document-viewer/GetPdfWithPrintDialog</url-pattern>
+        <url-pattern>/GetPdfWithPrintDialog</url-pattern>
     </servlet-mapping>
     
     <servlet>
@@ -176,7 +176,7 @@
 
     <servlet-mapping>
         <servlet-name>ReorderPageHandlerServlet</servlet-name>
-        <url-pattern>/document-viewer/ReorderPageHandler</url-pattern>
+        <url-pattern>/ReorderPageHandler</url-pattern>
     </servlet-mapping>
     
     <servlet>
@@ -186,7 +186,7 @@
 
     <servlet-mapping>
         <servlet-name>RotatePageHandlerServlet</servlet-name>
-        <url-pattern>/document-viewer/RotatePageHandler</url-pattern>
+        <url-pattern>/RotatePageHandler</url-pattern>
     </servlet-mapping>
     
 
