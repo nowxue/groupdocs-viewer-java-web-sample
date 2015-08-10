@@ -414,4 +414,9 @@ public class Configuration implements IServiceConfiguration {
     public Integer getImageWebRequestTimeout() {
         return 5000;
     }
+
+    @Override
+    public Integer getImageResolution() {
+        return null;
+    }
 }
