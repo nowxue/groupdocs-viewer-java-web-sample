@@ -151,6 +151,11 @@ public class Configuration implements IServiceConfiguration {
     }
 
     @Override
+    public String getCustomDocumentCss() {
+        return null;
+    }
+
+    @Override
     public Boolean isZoomToFitHeight() {
         return Boolean.valueOf(properties.getProperty("groupdocs.viewer.zoomToFitHeight"));
     }
