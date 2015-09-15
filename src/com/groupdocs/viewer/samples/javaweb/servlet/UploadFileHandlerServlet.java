@@ -8,6 +8,8 @@ import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
+
+import com.groupdocs.viewer.config.ServiceConfiguration;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -26,7 +28,9 @@ public class UploadFileHandlerServlet extends ViewerServlet{
                 String fileName = extractFileName(part);
                 String uploadResponse = (String) viewerHandler.uploadFile(part.getInputStream(), fileName, 0);
                 JSONObject obj = new JSONObject(uploadResponse);
-                response.sendRedirect("view?tokenId=" + obj.getString("tokenId"));
+                final ServiceConfiguration configuration = viewerHandler.getConfiguration();
+                final String applicationPath = configuration.getApplicationPath();
+                response.sendRedirect((applicationPath == null || "null".equalsIgnoreCase(applicationPath) ? "/" : applicationPath) + "?tokenId=" + obj.getString("tokenId"));
                 return;
             } catch (Exception ex) {
                 Logger.getLogger(UploadFileHandlerServlet.class.getName()).log(Level.SEVERE, null, ex);
