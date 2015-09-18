@@ -156,6 +156,11 @@ public class Configuration implements IServiceConfiguration {
     }
 
     @Override
+    public boolean isUseVirtualScrolling() {
+        return Boolean.valueOf(properties.getProperty("groupdocs.viewer.useVirtualScrolling"));
+    }
+
+    @Override
     public Boolean isZoomToFitHeight() {
         return Boolean.valueOf(properties.getProperty("groupdocs.viewer.zoomToFitHeight"));
     }
