@@ -429,4 +429,9 @@ public class Configuration implements IServiceConfiguration {
     public Integer getImageResolution() {
         return null;
     }
+
+    @Override
+    public Boolean isShowHiddenSlides() {
+        return false;
+    }
 }
