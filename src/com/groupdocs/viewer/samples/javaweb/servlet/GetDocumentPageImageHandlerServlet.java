@@ -21,8 +21,13 @@ public class GetDocumentPageImageHandlerServlet extends ViewerServlet{
             boolean usePdf = Boolean.valueOf(request.getParameter("usePdf"));
             int pageIndex = Integer.valueOf(request.getParameter("pageIndex"));
             boolean isPrint = Boolean.valueOf(request.getParameter("isPrint"));
+            final String watermarkPosition = request.getParameter("watermarkPosition");
+            final Integer watermarkFontSize = Integer.valueOf(request.getParameter("watermarkFontSize"));
+            final Boolean useHtmlBasedEngine = Boolean.valueOf(request.getParameter("useHtmlBasedEngine"));
+            final Boolean rotate = Boolean.valueOf(request.getParameter("rotate"));
+
             String path = request.getParameter("path");
-            writeOutput(viewerHandler.getDocumentPageImageHandler(path, width, quality, usePdf, pageIndex, isPrint, response), response);
+            writeOutput(viewerHandler.getDocumentPageImageHandler(path, width, quality, usePdf, pageIndex, isPrint, watermarkPosition, watermarkFontSize, useHtmlBasedEngine, rotate, response), response);
         } catch (Exception ex) {
             Logger.getLogger(GetDocumentPageImageHandlerServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
