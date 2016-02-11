@@ -3,7 +3,9 @@ package com.groupdocs.viewer.samples.javaweb.servlet;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -27,7 +29,13 @@ public class GetDocumentPageImageHandlerServlet extends ViewerServlet{
             final Boolean rotate = Boolean.valueOf(request.getParameter("rotate"));
 
             String path = request.getParameter("path");
-            writeOutput(viewerHandler.getDocumentPageImageHandler(path, width, quality, usePdf, pageIndex, isPrint, watermarkPosition, watermarkFontSize, useHtmlBasedEngine, rotate, response), response);
+            //If I use this line instead, the preview works correctly
+			//writeOutput(viewerHandler.getDocumentPageImageHandler(path, width, quality, usePdf, pageIndex, isPrint, watermarkPosition, watermarkFontSize, useHtmlBasedEngine, rotate, response), response);
+			
+			//Using ViewerHandlerBasic
+			System.out.println("Query string: " + request.getQueryString());
+			InputStream is = vhb.getDocumentPageImageHandler(request.getQueryString());
+			writeOutput(is, response);
         } catch (Exception ex) {
             Logger.getLogger(GetDocumentPageImageHandlerServlet.class.getName()).log(Level.SEVERE, null, ex);
         }

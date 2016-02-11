@@ -16,20 +16,24 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import org.apache.commons.io.IOUtils;
+import com.groupdocs.viewer.handlers.ViewerHandlerBasic;
 
 /**
  *
  * @author Alex Bobkov
  */
 public abstract class ViewerServlet extends HttpServlet {
-    private final String DEFAULT_ENCODING = "UTF-8";
+    protected final String DEFAULT_ENCODING = "UTF-8";
     protected static ViewerHandler viewerHandler;
+	protected static ViewerHandlerBasic vhb;
+
 
     @Override
     public void init() throws ServletException {
         try {
             if(viewerHandler == null){
                 final ServiceConfiguration config = new ServiceConfiguration(new Configuration());
+				vhb = new ViewerHandlerBasic(config);
                 viewerHandler = new ViewerHandler(config /*, new CustomHtmlCacheHandler(config.getCachePath())*/);
             }
         } catch (Exception ex) {
